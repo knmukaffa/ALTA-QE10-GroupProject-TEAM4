@@ -1,6 +1,6 @@
 Feature: Get single user
 
-  @Gorest
+#  @Gorest
 
 #  Scenario Outline: Get single user with valid parameter
 #    Given Get single user with registered <id>
