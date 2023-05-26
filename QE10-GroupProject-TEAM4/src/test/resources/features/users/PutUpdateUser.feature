@@ -8,7 +8,6 @@ Feature: Put Update User
     And Response body id should be id 2098067
     And Validate post create user with valid json and parameter id and valid token json schema
 
-  # benerin
   @Gorest
   Scenario: Get list user with invalid json and valid parameter id and valid token
     Given Get list user with invalid json and valid parameter id 2098067 and valid token
