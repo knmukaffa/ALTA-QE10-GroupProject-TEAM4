@@ -34,7 +34,7 @@ public class GetSingleUserStepDef {
 
     @And("Validate get single user with valid parameter id and valid token json schema")
     public void validateGetSingleUserWithValidIdAndValidTokenJsonSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"ValidGSUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"ValidGSUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
@@ -45,7 +45,7 @@ public class GetSingleUserStepDef {
 
     @And("Validate get single user with non registered parameter id and valid token json schema")
     public void validateGetSingleUserWithNonRegisteredParameterIdAndValidTokenJsonSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"InvalidTokenGLUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"InvalidTokenGLUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
@@ -56,7 +56,7 @@ public class GetSingleUserStepDef {
 
     @And("Validate get single user with valid parameter id and invalid token json schema")
     public void validateGetSingleUserWithValidParameterIdAndInvalidTokenJsonSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"InvalidTokenGLUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"InvalidTokenGLUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 

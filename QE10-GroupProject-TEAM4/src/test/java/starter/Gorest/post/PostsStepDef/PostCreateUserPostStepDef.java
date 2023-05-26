@@ -30,12 +30,6 @@ public class PostCreateUserPostStepDef {
     }
 
 
-    @Then("Status code should be {int} Created")
-    public void statusCodeShouldBeCreated(int created) {
-        SerenityRest.then().statusCode(created);
-    }
-
-
     @And("Validate post create user resources json schema")
     public void validatePutUpdateUserResourcesJsonSchema() {
         File jsonSchema = new File(JsonSchema.POST_CREATE_USER_POST_SCHEMA);

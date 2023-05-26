@@ -17,7 +17,7 @@ public class PutUpdateUserStepDef {
 
     @Given("Put update user with valid json and parameter id {int} and valid token")
     public void putUpdateUserWithValidJsonAndParameterIdAndValidToken(int id){
-        File json = new File(Constants.REQ_BODY_DIR+"PutUpdateUserValidBody.json");
+        File json = new File(Constants.JSON_REQ_BODY_POST+"PutUpdateUserValidBody.json");
         gorestUsersAPI.putCreateUserWithValidJsonAndParameterIdAndValidToken(id, json);
     }
 
@@ -28,55 +28,55 @@ public class PutUpdateUserStepDef {
 
     @And("Validate post create user with valid json and parameter id and valid token json schema")
     public void validatePostCreateUserWithValidJsonAndParameterIdAndValidTokenJsonSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"ValidPUUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"ValidPUUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
     @Given("Get list user with invalid json and valid parameter id {int} and valid token")
     public void getListUserWithInvalidJsonAndValidParameterIdAndValidToken(int id) {
-        File json = new File(Constants.REQ_BODY_DIR+"PutUpdateUserInvalidBody.json");
+        File json = new File(Constants.JSON_REQ_BODY_POST+"PutUpdateUserInvalidBody.json");
         gorestUsersAPI.putCreateUserWithValidJsonAndParameterIdAndValidToken(id, json);
     }
 
     @And("Validate post create user with invalid json and valid parameter id and valid token json schema")
     public void validatePostCreateUserWithInvalidJsonAndValidParameterIdAndValidTokenJsonSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"InvalidTokenGLUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"InvalidTokenGLUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
     @Given("Get list user with valid json and parameter id {int} and invalid token")
     public void getListUserWithValidJsonAndParameterIdAndInvalidToken(int id) {
-        File json = new File(Constants.REQ_BODY_DIR+"PutUpdateUserValidBody.json");
+        File json = new File(Constants.JSON_REQ_BODY_POST+"PutUpdateUserValidBody.json");
         gorestUsersAPI.putCreateUserWithValidJsonAndParameterIdAndInvalidToken(id, json);
     }
 
     @And("Validate get list user with valid json and parameter id and invalid token json schema")
     public void validateGetListUserWithValidJsonAndParameterIdAndInvalidTokenJsonSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"InvalidTokenGLUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"InvalidTokenGLUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
     @Given("Get list user with valid json and  non registered id {int} and valid token")
     public void getListUserWithValidJsonAndNonRegisteredIdAndValidToken(int id) {
-        File json = new File(Constants.REQ_BODY_DIR+"PutUpdateUserValidBody.json");
+        File json = new File(Constants.JSON_REQ_BODY_POST+"PutUpdateUserValidBody.json");
         gorestUsersAPI.putCreateUserWithValidJsonAndParameterIdAndValidToken(id, json);
     }
 
     @And("Validate get list resources user with valid json and  non registered id and valid token schema")
     public void validateGetListResourcesUserWithValidJsonAndNonRegisteredIdAndValidTokenSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"InvalidTokenGLUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"InvalidTokenGLUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
     @Given("Get list user with invalid json and non registered id {int} and valid token")
     public void getListUserWithInvalidJsonAndNonRegisteredIdAndValidToken(int id) {
-        File json = new File(Constants.REQ_BODY_DIR+"PutUpdateUserInvalidBody.json");
+        File json = new File(Constants.JSON_REQ_BODY_POST+"PutUpdateUserInvalidBody.json");
         gorestUsersAPI.putCreateUserWithValidJsonAndParameterIdAndValidToken(id, json);
     }
 
     @And("Validate get list resources user with invalid json and non registered id and valid token schema")
     public void validateGetListResourcesUserWithInvalidJsonAndNonRegisteredIdAndValidTokenSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"InvalidTokenGLUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"InvalidTokenGLUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 }

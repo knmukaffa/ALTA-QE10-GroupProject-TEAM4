@@ -43,7 +43,7 @@ public class DeleteUserStepDef {
 
     @And("Validate delete user with valid parameter id and invalid token json schema")
     public void validateDeleteUserWithValidParameterIdAndInvalidTokenJsonSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"InvalidTokenGLUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"InvalidTokenGLUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 }

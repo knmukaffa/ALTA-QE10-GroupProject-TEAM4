@@ -12,11 +12,11 @@ import static io.restassured.RestAssured.post;
 import static io.restassured.RestAssured.request;
 
 public class GorestUsersAPI {
-    public static String GET_LIST_USERS = Constants.BASE_URL + "/public/v2/{path}";
-    public static String GET_SINGLE_USER = Constants.BASE_URL + "/public/v2/users/{id}";
-    public static String POST_CREATE_USERS = Constants.BASE_URL + "/public/v2/{path}";
-    public static String PUT_UPDATE_USER = Constants.BASE_URL + "/public/v2/users/{id}";
-    public static String DELETE_USER = Constants.BASE_URL + "/public/v2/users/{id}";
+    public static String GET_LIST_USERS = Constants.BASE_URL + "/{path}";
+    public static String GET_SINGLE_USER = Constants.BASE_URL + "/users/{id}";
+    public static String POST_CREATE_USERS = Constants.BASE_URL + "/{path}";
+    public static String PUT_UPDATE_USER = Constants.BASE_URL + "/users/{id}";
+    public static String DELETE_USER = Constants.BASE_URL + "/users/{id}";
 
     @Step("Get list users with valid path and valid token")
     public void getListUsersValidPathAndValidToken(String path) {

@@ -22,11 +22,6 @@ public class DeleteUserPostStepDef {
         SerenityRest.when().delete(DeleteApi.DELETE_USER_POST);
     }
 
-    @Then("Status code should be {int} No Content")
-    public void statusCodeShouldBeNoContent(int noContent) {
-        SerenityRest.then().statusCode(noContent);
-    }
-
     @Given("Delete single user with invalid {string}")
     public void deleteSingleUserWithInvalid(String id) {
         deleteApi.deleteInvalidUser(id);

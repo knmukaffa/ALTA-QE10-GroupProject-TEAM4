@@ -20,7 +20,7 @@ public class GetUserPostStepDef {
 
     // Postitive Case
     @Given("Get list user post with valid parameter")
-    public void getListUserPostWithValidParameter(){
+    public void getListUserPostWithValidParameter() {
         getApi.getListUserPost();
     }
 
@@ -29,10 +29,6 @@ public class GetUserPostStepDef {
         SerenityRest.when().get(GetApi.GET_LIST_USER_POST);
     }
 
-    @Then("Status code should be {int} OK")
-    public void statusCodeShouldBeOK(int ok) {
-        SerenityRest.then().statusCode(ok);
-    }
 
     @And("Validate json schema get list user post")
     public void validateJsonSchemaGetListUserPost() {
@@ -51,9 +47,5 @@ public class GetUserPostStepDef {
     public void sendGetListUserPostInvalid() {
         SerenityRest.when().get(GetApi.GET_LIST_USER_POST_INVALID);
     }
-
-    @Then("Status code should be {int} Not Found")
-    public void statusCodeShouldBeNotFound(int notFound) {
-        SerenityRest.then().statusCode(notFound);
-    }
 }
+

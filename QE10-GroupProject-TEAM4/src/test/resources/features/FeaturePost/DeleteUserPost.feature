@@ -10,7 +10,7 @@ Feature: Get list user post
       | 29904 |
       | 29903 |
 
-
+  @Gorest
   Scenario Outline: Delete user with invalid parameter id
     Given Delete single user with invalid "<id>"
     When Send delete single user post

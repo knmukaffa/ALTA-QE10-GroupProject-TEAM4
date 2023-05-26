@@ -34,7 +34,7 @@ public class GetListUsersStepDef {
 
     @And("Validate get list users with valid path and valid token json schema")
     public void validateGetListJsonSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"ValidGLUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"ValidGLUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
@@ -55,7 +55,7 @@ public class GetListUsersStepDef {
 
     @And("Validate get list users with valid path and invalid token json schema")
     public void validateGetListUsersWithValidPathAndInvalidTokenJsonSchema() {
-        File json = new File(Constants.JSON_SCHEMA_DIR+"InvalidTokenGLUJSONSchema.json");
+        File json = new File(Constants.JSON_SCHEMA_POST+"InvalidTokenGLUJSONSchema.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
