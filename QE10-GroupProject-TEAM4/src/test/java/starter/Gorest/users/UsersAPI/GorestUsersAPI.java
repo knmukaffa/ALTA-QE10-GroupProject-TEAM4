@@ -23,7 +23,6 @@ public class GorestUsersAPI {
         SerenityRest.given()
                 .pathParam("path", path)
                 .header("Authorization", "Bearer 5c258992a4cb60cbbc85fd1813f124767bac25a70a8a38a88d087292c1739754");
-        ;
     }
 
     @Step("Get list users with valid path and invalid token")

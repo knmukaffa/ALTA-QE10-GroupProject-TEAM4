@@ -1,4 +1,5 @@
 Feature: Post Create User
+  #benerin
   @Gorest
   Scenario: Post create user with valid json and path and token
     Given Post create user with valid json and path "users" and token
@@ -20,14 +21,18 @@ Feature: Post Create User
     When Send post create user
     Then Status code should be 404 Not Found
 
-
+    # benerin
+  @Gorest
   Scenario: Post create user with invalid json and valid path and valid token
     Given Post create user with invalid json and valid path "users" and valid token
     When Send post create user
     Then Status code should be 400 Bad Request
 
-
+  @Gorest
   Scenario: Post create user with invalid json and invalid path and valid token
     Given Post Create user with invalid json and invalid path "uussers" and valid token
     When Send post create user
     Then Status code should be 404 Not Found
+
+
+
